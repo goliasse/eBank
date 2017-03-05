@@ -1,0 +1,8 @@
+.myLogin{
+	height: 250px;
+    float: right;
+    position: fixed;
+    bottom: 27px;
+    right: 110px;
+    font-size: 30px;
+}
