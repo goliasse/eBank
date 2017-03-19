@@ -11,8 +11,8 @@
 <body background="resources/images/wc.jpg">
 	<div class="myLogin">
 		<br> New User? <a href="Registration"> Register</a> 
-		<br> Returning User?<a href="Login"> Login</a> 
-		<br> Manager?<a href="ManagerLogin"> Sign In</a> 
+		<br> Returning User? <a href="Login"> Login</a> 
+		<br> Manager? <a href="ManagerLogin"> Sign In</a> 
 	</div>
 </body>
 </html>

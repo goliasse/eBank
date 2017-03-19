@@ -1,8 +1,34 @@
 .myLogin{
-	height: 250px;
+	height: 851px;
     float: right;
     position: fixed;
     bottom: 27px;
     right: 110px;
-    font-size: 30px;
+    font-size: 25px;
 }
+
+.submit {
+    width: 5em;  height: 2em;
+    font-size: large;
+    position: left
+}
+
+.input {
+    width: 10em;  height: 1em;
+    font-size: large;
+    position: left
+}
+
+label {
+    position:static;
+    width: 100px;
+}
+
+label span {	
+    position:absolute;
+    width: 100px;
+}
+
+label input, label textarea, label select {
+    margin-left: 120px;    
+}s

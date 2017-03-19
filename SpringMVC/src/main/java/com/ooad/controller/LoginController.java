@@ -9,8 +9,12 @@ public class LoginController {
 
 	@RequestMapping("/Login")
 	public ModelAndView customerLogin(){
-		return new ModelAndView("AppLogin","msg","Login");
+		return new ModelAndView("AppLogin");
 	}
 	
+	@RequestMapping("/Registration")
+	public ModelAndView customerRegistration(){
+		return new ModelAndView("AppRegistration");
+	}
 }
 	
