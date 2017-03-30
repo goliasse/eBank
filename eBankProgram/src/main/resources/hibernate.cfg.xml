@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>    
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/ebank</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">password</property>
+    <property name="show_sql">true</property>
+    
+    <!--the mapping element specifies the Java entity class, "Account", needs to be mapped--> 
+    <mapping class="net.codejava.eBankProgram.Account" />
+    <!--the mapping element specifies the Java entity class, "SavingsAccount", needs to be mapped--> 
+    <!-- mapping class="net.codejava.eBankProgram.SavingsAccount" -->
+    <!--the mapping element specifies the Java entity class, "CheckingAccount", needs to be mapped--> 
+    <!--mapping class="net.codejava.eBankProgram.CheckingAccount" -->
+    <!--the mapping element specifies the Java entity class, "User", needs to be mapped--> 
+    <mapping class="net.codejava.eBankProgram.User" />
+    <!--the mapping element specifies the Java entity class, "Manager", needs to be mapped--> 
+    <!--mapping class="net.codejava.eBankProgram.Manager"/-->
+  </session-factory>
+</hibernate-configuration>
