@@ -29,7 +29,7 @@ public class DAO {
 		session.close();
 	}
 
-	public String fetchCredentials(String username) {
+	public String fetchCustomerCredentials(String username) {
 		SessionFactory sf = HibernateUtil.getSessionFactory();
 		Session session = sf.openSession();
 		session.beginTransaction();
@@ -37,7 +37,21 @@ public class DAO {
 		Query query = session.createQuery(hql);
 		query.setParameter("custUname", username);
 		List results = query.getResultList();
-		if(results ==null)
+		if(results ==null || results.isEmpty())
+			return null;
+		else
+			return results.get(0).toString();
+	}
+
+	public String fetchManagerCredentials(String uname) {
+		SessionFactory sf = HibernateUtil.getSessionFactory();
+		Session session = sf.openSession();
+		session.beginTransaction();
+		String hql = "SELECT E.managerPass FROM Manager E WHERE E.managerUName = :managerUname";
+		Query query = session.createQuery(hql);
+		query.setParameter("managerUname", uname);
+		List results = query.getResultList();
+		if(results == null || results.isEmpty())
 			return null;
 		else
 			return results.get(0).toString();

@@ -25,11 +25,37 @@ public class Start {
 		}
 
 		if(option == 2){
-			Login();
+			LoginCustomer();
+		}
+		if(option ==3){
+			LoginManager();
 		}
 	}
 
-	private static void Login(){
+	private static void LoginManager() {
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Welcome Manager! Enter Below Details to Login");
+
+		System.out.print("Enter Manager user name: "); 
+		String uname = scanner.nextLine(); 
+
+		System.out.print("Enter password: "); 
+		String passwrd = scanner.nextLine(); 
+
+		Authorize auth = new Authorize();
+		boolean isAuth = auth.authorizeManager(uname, passwrd);
+
+		if(isAuth){
+			System.out.println("Successfully Authorized!!!!");
+		}else{
+			System.out.println("Inavlid Credentials!!");
+			LoginManager();
+		}
+		
+	}
+
+	private static void LoginCustomer(){
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Enter Below Details to Login");
@@ -47,7 +73,7 @@ public class Start {
 			System.out.println("Successfully Authorized!!!!");
 		}else{
 			System.out.println("Inavlid Credentials!!");
-			Login();
+			LoginCustomer();
 		}
 
 	}
